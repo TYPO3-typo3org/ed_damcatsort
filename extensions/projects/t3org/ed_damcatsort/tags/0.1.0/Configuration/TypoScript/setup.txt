@@ -1,0 +1,28 @@
+plugin.tx_eddamcatsort {
+	persistence {
+		classes {
+			Tx_EdDamcatsort_Domain_Model_Dam {
+				newRecordStoragePid = 0
+				mapping {
+					tableName = tx_dam
+				}
+			}
+			Tx_EdDamcatsort_Domain_Model_DamCategory {
+				newRecordStoragePid = 0
+				mapping {
+					tableName = tx_dam_cat
+				}
+			}
+			Tx_EdDamcatsort_Domain_Model_Media {
+				newRecordStoragePid = 0
+				mapping {
+					tableName = tx_eddamcatsort_media
+				}
+			}
+		}
+	}
+}
+
+config.tx_extbase.persistence.classes.Tx_EdDamcatsort_Domain_Model_Dam < plugin.tx_eddamcatsort.persistence.classes.Tx_EdDamcatsort_Domain_Model_Dam
+config.tx_extbase.persistence.classes.Tx_EdDamcatsort_Domain_Model_DamCategory < plugin.tx_eddamcatsort.persistence.classes.Tx_EdDamcatsort_Domain_Model_DamCategory
+config.tx_extbase.persistence.classes.Tx_EdDamcatsort_Domain_Model_Media < plugin.tx_eddamcatsort.persistence.classes.Tx_EdDamcatsort_Domain_Model_Media
